@@ -19,7 +19,7 @@ Antes de começar, certifique-se de ter instalado:
 
 1. Clone o repositório:
 
-```git clone https://seurepositorio.com/xxz-backend.git```
+```git clone git@github.com:rpfitz/fitz-challenge.git```
 
 2. Instale as dependências:
 

@@ -31,10 +31,10 @@ Iniciará o servidor em http://localhost:4200/.
 ## Estrutura do Projeto
 A estrutura de diretórios deste projeto é organizada da seguinte forma:
 
-src/: Contém todo o código-fonte do projeto.
-app/: Contém os componentes, serviços e módulos principais.
-assets/: Contém arquivos estáticos, como imagens e arquivos CSS.
-environments/: Contém os arquivos de variáveis de ambiente.
+- src/: Contém todo o código-fonte do projeto.
+- app/: Contém os componentes, serviços e módulos principais.
+- assets/: Contém arquivos estáticos, como imagens e arquivos CSS.
+- environments/: Contém os arquivos de variáveis de ambiente.
 
 ## Build do Projeto
 Criará uma pasta dist/ na raiz do projeto com os arquivos de build:
