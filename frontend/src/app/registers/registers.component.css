@@ -1,0 +1,122 @@
+.records-component {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-filter {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.search-filter input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.filter-status {
+  flex-basis: calc(50% - 10px);
+  display: flex;
+  align-items: center;
+}
+
+.filter-status label {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.filter-status select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.no-records-message {
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.records-list {
+  list-style: none;
+  padding: 0;
+}
+
+.record-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.record-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.record-item p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.record-item a {
+  text-decoration: none;
+  color: #a11aaa;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.record-item span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.mat-paginator {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  .search-filter input[type="text"],
+  .filter-status select,
+  .record-item p,
+  .record-item a,
+  .record-item span,
+  .no-records-message {
+    font-size: 14px;
+  }
+
+  .record-item {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+}

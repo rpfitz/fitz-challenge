@@ -1,0 +1,23 @@
+<div class="record-details">
+  <ng-container *ngIf="record">
+    <h2 class="record-title">Detalhes do Registro de {{ record.nome }}</h2>
+    <ul class="record-details-list">
+      <li><strong>Nome:</strong> {{ record.nome }}</li>
+      <li><strong>E-mail:</strong> {{ record.email }}</li>
+      <li><strong>CPF:</strong> {{ record.cpf }}</li>
+      <li><strong>Celular:</strong> {{ record.celular }}</li>
+      <li><strong>Conhecimentos:</strong> {{ record.conhecimentos.join(', ') }}.</li>
+      <li><strong>Status: <span [ngClass]="{'valid': record.validado, 'not-valid': !record.validado}">{{
+            record.status }}</span></strong></li>
+      <li><strong>Data de validação:</strong> {{ record.dataValidacao | date:'dd/MM/yyyy' }}</li>
+      <li><strong>Hora de validação:</strong> {{ record.dataValidacao | date:'HH:mm' }}</li>
+    </ul>
+
+    <button [ngClass]="{'valid-button': !record.validado, 'not-valid-button': record.validado}" (click)="validationToggle()">
+      {{ record.validado ? 'Não validar' : 'Validar' }}
+    </button>
+    <button [routerLink]="['/registros']" class="back-button">Voltar</button>
+
+    <p class="response-message">{{ responseMessage }}</p>
+  </ng-container>
+</div>

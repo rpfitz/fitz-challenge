@@ -1,0 +1,32 @@
+<div class="records-component">
+  <h2>Lista de Registros</h2>
+
+  <div class="filters">
+    <div class="search-filter">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar registros" (input)="searchRecords()" />
+    </div>
+    <div class="filter-status">
+      <label for="status">Filtrar por Status:</label>
+      <select id="status" [(ngModel)]="filterStatus" (change)="searchRecords()">
+        <option value="">Todos</option>
+        <option value="Validado">Validado</option>
+        <option value="Não validado">Não validado</option>
+      </select>
+    </div>
+  </div>
+
+  <div *ngIf="filteredRecords.length === 0" class="no-records-message">
+    Você ainda não possui um registro.
+  </div>
+
+  <ul *ngIf="filteredRecords.length > 0" class="records-list">
+    <li *ngFor="let record of filteredRecords" class="record-item">
+      <p>Nome: <a (click)="createValidationRoute(record)">{{ record.nome }}</a></p>
+      <p>Status: <span [style.color]="getStatusTextColor(record.status)">{{ record.status }}</span></p>
+    </li>
+  </ul>
+
+  <mat-paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" showFirstLastButtons
+    (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
