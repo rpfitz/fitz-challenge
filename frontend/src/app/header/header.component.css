@@ -1,0 +1,30 @@
+.header-class {
+  height: 10vh;
+  background-color: #a11aaa;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.logo-image {
+  width: 125px;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  margin-right: 1em;
+}
+
+@media (max-width: 768px) {
+  .header-class {
+    height: 8vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

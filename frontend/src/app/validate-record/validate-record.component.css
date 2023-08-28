@@ -1,0 +1,83 @@
+.record-details {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.record-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.record-details-list {
+  list-style: none;
+  padding: 0;
+}
+
+.record-details-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.valid {
+  color: green;
+}
+
+.not-valid {
+  color: red;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 1em;
+  background-color: #a11aaa;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+  width: 140px;
+}
+
+button.valid-button {
+  background-color: green;
+}
+
+button.not-valid-button {
+  background-color: red;
+}
+
+.back-button {
+  background-color: #333;
+}
+
+.back-button:hover {
+  background-color: #444;
+}
+
+
+.response-message {
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .record-title {
+    font-size: 20px;
+  }
+
+  .record-details-list li {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
